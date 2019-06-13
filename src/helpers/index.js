@@ -1,8 +1,7 @@
 
-const factoryStar = (index, active = false) => {
+const factoryStar = index => {
     return {
-        index,
-        active
+        index
     }
 }
 
@@ -11,7 +10,7 @@ export const createStars = (count = 10) => {
         const stars = [];
         let i;
         for(i = 0; i < count; i++){
-            const star = factoryStar(i);
+            const star = factoryStar(i + 1);
             stars.push(star);
         }
         return [...stars];

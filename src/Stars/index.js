@@ -9,7 +9,7 @@ export default class Stars extends React.Component {
         super(props);
         const stars = createStars(this.props.countStars);
         this.state = {
-            selectIndex: -1,
+            selectIndex: 0,
             selectIndexForce: this.props.rating,
             stars
         }
@@ -17,11 +17,11 @@ export default class Stars extends React.Component {
 
     reset(){
         this.setState({
-            selectIndex: -1
+            selectIndex: 0
         });
     }
 
-    setActiveStar(index = -1){
+    setActiveStar(index = 0){
         this.setState({
             selectIndex: index
         })
@@ -34,7 +34,7 @@ export default class Stars extends React.Component {
 
         if(index === this.state.selectIndexForce){
             this.setState({
-                selectIndexForce: -1
+                selectIndexForce: 0
             });
         }
         else{
@@ -59,13 +59,14 @@ export default class Stars extends React.Component {
     }
 
     render() {
+        console.log(this.state.selectIndex);
+        console.log(this.state.selectIndexForce);
         return <Template
                     {...this.props}
                     icon={this.props.icon}
                     stars={this.state.stars}
                     selectIndex={this.state.selectIndex}
                     selectIndexForce={this.state.selectIndexForce}
-                    setActiveStar={this.setActiveStar.bind(this)}
                     onMouseEnter={this.onMouseEnter.bind(this)}
                     onMouseLeave={this.onMouseLeave.bind(this)}
                     onSelect={this.onSelect.bind(this)}
@@ -87,7 +88,7 @@ Stars.propTypes = {
 }
 
 Stars.defaultProps = {
-    rating: -1,
+    rating: 0,
     countStars: 10,
     readonly: false,
     onSelect: () => {},

@@ -6,7 +6,7 @@ const Stars = ({ classes, ...props }) => {
     return(
         <div className={[classes.stars, props.classNameStarsWrap].join(' ')} onMouseLeave={props.onMouseLeave}>
             {props.stars.map(star => {
-                const active = (props.selectIndex !== -1 && star.index <= props.selectIndex) || (props.selectIndexForce !== -1 && star.index <= props.selectIndexForce);
+                const active = (props.selectIndex > 0 && star.index <= props.selectIndex) || (props.selectIndexForce > 0 && star.index <= props.selectIndexForce);
                 return (
                     <div
                         className={[classes.star, props.classNameStarItem, active ? classes.active : ''].join(' ')}
