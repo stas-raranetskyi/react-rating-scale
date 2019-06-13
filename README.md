@@ -11,7 +11,7 @@ npm install --save react-rating-scale
 ## Usage
 
 ```javascript
-import React from 'react'
+import React from 'react';
 import Rating  from 'react-rating-scale';
 
 class App extends React.Component {
@@ -29,7 +29,7 @@ length | number | 10 | The max number of items to choose from or to display.
 rating | number | 0 | The user's rating. Number of items to highlight. Ranging from 0 to max number of items.
 readonly | bool | false | Determines whether user can select a new rating or whether the items are just for display.
 onSelect | function | () => {} | Callback that will be passed the new rating a user selects.
-beforeSelect | function | () => true | Callback that will before calling onSelect. Must return true for the function to execute.
+beforeSelect | function | () => true | Callback that will before calling onSelect. Must return true for the function onSelect to execute.
 icon | string | '' | Path to your icon.
 width | number | 20 | Icon width.
 height | number | 19 | Icon height.
