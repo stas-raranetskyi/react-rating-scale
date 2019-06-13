@@ -1,8 +1,5 @@
-webpack.config.js
+webpack.config*
+src
 docs
-src/App.js
-src/index.html
-src/index.js
-src/styles.css
 node_modules
 .babelrc

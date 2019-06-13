@@ -1,15 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const PATHS = {
     source: path.join(__dirname, 'src'),
-    build: path.join(__dirname, 'docs')
+    docs: path.join(__dirname, 'docs'),
 };
 
-module.exports = {
-    entry: PATHS.source + '/index.js',
+const config = {
+    entry: `${PATHS.source}/index.js`,
     output: {
-        path: PATHS.build,
+        path: PATHS.docs,
         filename: 'bundle.js'
     },
     module: {
@@ -46,3 +45,5 @@ module.exports = {
         }),
     ]
 }
+
+module.exports = config;
