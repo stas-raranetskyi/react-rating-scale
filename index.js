@@ -1,3 +1,3 @@
-import Stars from './src/Stars';
+import Rating from './src/Rating';
 
-export default Stars;
+export default Rating;
