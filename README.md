@@ -29,8 +29,8 @@ countStars | number | 10 | The max number of stars to choose from or to display
 rating | number [0-countStars - 1] | -1 | The user's rating. Number of stars to highlight.
 readonly | bool | false | Determines whether user can select a new rating or whether the stars are just for display
 onSelect | function | () => {} | Callback that will be passed the new rating a user selects
-beforeSelect | function | () => true | Callback that will before calling onSelect
-icon | string | icon | Path to your icon
+beforeSelect | function | () => true | Callback that will before calling onSelect. Must return true for the function to execute
+icon | string | '' | Path to your icon.
 width | number | 20 | width icon
 height | number | 19 | height icon
 classNameStarsWrap | string | '' | class name for stars wrap
