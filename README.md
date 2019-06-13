@@ -20,8 +20,8 @@ import Rating  from 'react-rating-stars';
 
 Option | Type | Default
 ------ | ---- | -------
-rating | number [0-9] | -1
 countStars | number | 10
+rating | number [0-countStars - 1] | -1
 readonly | bool | false
 onSelect | function | () => {}
 beforeSelect | function | () => true
