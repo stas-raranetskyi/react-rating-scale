@@ -13,7 +13,11 @@ npm install --save rating-stars-react
 ```javascript
 import React from 'react'
 import Rating  from 'rating-stars-react';
-<Rating />
+class App extends React.Component {
+    render() {
+        return <Rating />;
+    }
+}
 ```
 
 ### Settings
