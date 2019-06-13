@@ -1,3 +1,4 @@
+import icon from '../icon';
 export const styles = {
     stars: {
         'display': 'flex',
@@ -6,7 +7,7 @@ export const styles = {
         'cursor': 'pointer',
         'width': props => props.width,
         'height': props => props.height,
-        'background-image': props => `url(${props.icon})`,
+        'background-image': props => `url(${props.icon.length === 0 ? icon : props.icon})`,
         'background-repeat': 'no-repeat',
         'background-size': '100% 200%',
         'margin-left': 3,

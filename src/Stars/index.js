@@ -2,7 +2,6 @@ import React from 'react';
 import Template from './template';
 import PropTypes from 'prop-types';
 import { createStars } from '../helpers';
-import icon from './img/icon.svg';
 
 export default class Stars extends React.Component {
 
@@ -62,6 +61,7 @@ export default class Stars extends React.Component {
     render() {
         return <Template
                     {...this.props}
+                    icon={this.props.icon}
                     stars={this.state.stars}
                     selectIndex={this.state.selectIndex}
                     selectIndexForce={this.state.selectIndexForce}
@@ -92,7 +92,7 @@ Stars.defaultProps = {
     readonly: false,
     onSelect: () => {},
     beforeSelect: () => true,
-    icon,
+    icon: '',
     width: 20,
     height: 19,
     classNameStarsWrap: '',
