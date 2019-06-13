@@ -1,19 +1,19 @@
 
-const factoryStar = index => {
+const factoryItem = index => {
     return {
         index
     }
 }
 
-export const createStars = (count = 10) => {
+export const createItems = (count = 10) => {
     try{
-        const stars = [];
+        const items = [];
         let i;
         for(i = 0; i < count; i++){
-            const star = factoryStar(i + 1);
-            stars.push(star);
+            const item = factoryItem(i + 1);
+            items.push(item);
         }
-        return [...stars];
+        return [...items];
     }
     catch(err){
         return [];

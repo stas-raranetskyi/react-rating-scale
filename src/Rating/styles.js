@@ -1,9 +1,9 @@
 import icon from '../icon';
 export const styles = {
-    stars: {
+    rating: {
         'display': 'flex',
     },
-    star: {
+    icon: {
         'cursor': 'pointer',
         'width': props => props.width,
         'height': props => props.height,

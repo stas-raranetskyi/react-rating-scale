@@ -25,16 +25,17 @@ class App extends React.Component {
 
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
-length | number | 10 | The max number of stars to choose from or to display
-rating | number | 0 | The user's rating. Number of stars to highlight. ranging from 0 to max number of stars
-readonly | bool | false | Determines whether user can select a new rating or whether the stars are just for display
+length | number | 10 | The max number of items to choose from or to display
+rating | number | 0 | The user's rating. Number of items to highlight. ranging from 0 to max number of items
+readonly | bool | false | Determines whether user can select a new rating or whether the items are just for display
 onSelect | function | () => {} | Callback that will be passed the new rating a user selects
 beforeSelect | function | () => true | Callback that will before calling onSelect. Must return true for the function to execute
 icon | string | '' | Path to your icon.
 width | number | 20 | width icon
 height | number | 19 | height icon
-classNameStarsWrap | string | '' | class name for stars wrap
-classNameStarItem | string | '' | class name fro star icon
+classNameRatingWrap | string | '' | class name for rating wrap
+classNameRatingItem | string | '' | class name for rating icon
+classNameRatingItemActive | string | '' | class name for rating icon active
 
 ## Author
 

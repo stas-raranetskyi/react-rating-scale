@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Stars from './Stars';
+import Rating from './Rating';
 import './styles.css';
 
 class App extends Component {
@@ -7,16 +7,16 @@ class App extends Component {
         return (
             <div className="container">
                 <div className="title">
-                    React rating stars
+                    React rating scale
                 </div>
                 <div className="subtitle">
                     Editable
                 </div>
-                <Stars />
+                <Rating />
                 <div className="subtitle">
                     Non-Editable
                 </div>
-                <Stars readonly={true} rating={7}/>
+                <Rating readonly={true} rating={7}/>
             </div>
         );
     }

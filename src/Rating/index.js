@@ -1,17 +1,17 @@
 import React from 'react';
 import Template from './template';
 import PropTypes from 'prop-types';
-import { createStars } from '../helpers';
+import { createItems } from '../helpers';
 
-export default class Stars extends React.Component {
+export default class Rating extends React.Component {
 
     constructor(props){
         super(props);
-        const stars = createStars(this.props.length);
+        const items = createItems(this.props.length);
         this.state = {
             selectIndex: 0,
             selectIndexForce: this.props.rating,
-            stars
+            items
         }
     }
 
@@ -19,12 +19,6 @@ export default class Stars extends React.Component {
         this.setState({
             selectIndex: 0
         });
-    }
-
-    setActiveStar(index = 0){
-        this.setState({
-            selectIndex: index
-        })
     }
 
     onSelect(index){
@@ -54,7 +48,9 @@ export default class Stars extends React.Component {
 
     onMouseEnter(index){
         if(this.props.readonly === false){
-            this.setActiveStar(index);
+            this.setState({
+                selectIndex: index
+            })
         }
     }
 
@@ -62,7 +58,7 @@ export default class Stars extends React.Component {
         return <Template
                     {...this.props}
                     icon={this.props.icon}
-                    stars={this.state.stars}
+                    items={this.state.items}
                     selectIndex={this.state.selectIndex}
                     selectIndexForce={this.state.selectIndexForce}
                     onMouseEnter={this.onMouseEnter.bind(this)}
@@ -72,7 +68,7 @@ export default class Stars extends React.Component {
     }
 }
 
-Stars.propTypes = {
+Rating.propTypes = {
     rating: PropTypes.number,
     length: PropTypes.number,
     readonly: PropTypes.bool,
@@ -81,11 +77,12 @@ Stars.propTypes = {
     icon: PropTypes.string,
     width: PropTypes.number,
     height: PropTypes.number,
-    classNameStarsWrap: PropTypes.string,
-    classNameStarItem: PropTypes.string,
+    classNameRatingWrap: PropTypes.string,
+    classNameRatingItem: PropTypes.string,
+    classNameRatingItemActive: PropTypes.string,
 }
 
-Stars.defaultProps = {
+Rating.defaultProps = {
     rating: 0,
     length: 10,
     readonly: false,
@@ -94,6 +91,7 @@ Stars.defaultProps = {
     icon: '',
     width: 20,
     height: 19,
-    classNameStarsWrap: '',
-    classNameStarItem: '',
+    classNameRatingWrap: '',
+    classNameRatingItem: '',
+    classNameRatingItemActive: '',
 }
