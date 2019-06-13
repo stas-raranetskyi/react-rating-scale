@@ -1,7 +1,7 @@
 ## Install
 
 ```sh
-npm install --save react-rating-stars
+npm install --save rating-stars-react
 ```
 
 ## Demo
@@ -12,7 +12,7 @@ npm install --save react-rating-stars
 
 ```javascript
 import React from 'react'
-import Rating  from 'react-rating-stars';
+import Rating  from 'rating-stars-react';
 <Rating />
 ```
 
