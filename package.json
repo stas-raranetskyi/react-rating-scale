@@ -1,6 +1,6 @@
 {
   "name": "rating-stars-react",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "react rating stars",
   "main": "index.js",
   "scripts": {
