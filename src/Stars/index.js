@@ -28,7 +28,7 @@ export default class Stars extends React.Component {
     }
 
     onSelect(index){
-        if(typeof this.props.beforeSelect !== 'function' || this.props.beforeSelect() !== true || this.props.readonly === true){
+        if((typeof this.props.beforeSelect === 'function' && this.props.beforeSelect() !== true) || this.props.readonly === true){
             return;
         }
 
@@ -36,15 +36,15 @@ export default class Stars extends React.Component {
             this.setState({
                 selectIndexForce: -1
             });
-            return;
+        }
+        else{
+            this.setState({
+                selectIndexForce: index
+            });
         }
 
-        this.setState({
-            selectIndexForce: index
-        });
-
         if(typeof this.props.onSelect === 'function'){
-            this.props.onSelect();
+            this.props.onSelect(index);
         }
     }
 
