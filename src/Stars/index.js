@@ -7,7 +7,7 @@ export default class Stars extends React.Component {
 
     constructor(props){
         super(props);
-        const stars = createStars(this.props.countStars);
+        const stars = createStars(this.props.length);
         this.state = {
             selectIndex: 0,
             selectIndexForce: this.props.rating,
@@ -74,7 +74,7 @@ export default class Stars extends React.Component {
 
 Stars.propTypes = {
     rating: PropTypes.number,
-    countStars: PropTypes.number,
+    length: PropTypes.number,
     readonly: PropTypes.bool,
     onSelect: PropTypes.func,
     beforeSelect: PropTypes.func,
@@ -87,7 +87,7 @@ Stars.propTypes = {
 
 Stars.defaultProps = {
     rating: 0,
-    countStars: 10,
+    length: 10,
     readonly: false,
     onSelect: () => {},
     beforeSelect: () => true,

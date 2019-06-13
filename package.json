@@ -1,7 +1,7 @@
 {
   "name": "react-rating-scale",
-  "version": "1.0.3",
-  "description": "react rating stars",
+  "version": "1.0.5",
+  "description": "react rating scale",
   "main": "build/bundle.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot --config webpack.config.dev.js",
@@ -24,10 +24,10 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "react-jss": "^10.0.0-alpha.9",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react": "^16.5.2"
   },
   "devDependencies": {
+    "react-dom": "^16.5.2",
     "babel-core": "^6.21.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",

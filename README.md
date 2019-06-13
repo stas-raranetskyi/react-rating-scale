@@ -25,7 +25,7 @@ class App extends React.Component {
 
 Option | Type | Default | Description
 ------ | ---- | ------- | -----------
-countStars | number | 10 | The max number of stars to choose from or to display
+length | number | 10 | The max number of stars to choose from or to display
 rating | number | 0 | The user's rating. Number of stars to highlight. ranging from 0 to max number of stars
 readonly | bool | false | Determines whether user can select a new rating or whether the stars are just for display
 onSelect | function | () => {} | Callback that will be passed the new rating a user selects
