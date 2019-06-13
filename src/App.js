@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
 import Stars from './components/Stars';
+import './styles.css';
 
 class App extends Component {
     render() {
-        return <Stars />;
+        return (
+            <div className="container">
+                <div className="title">
+                    React rating stars
+                </div>
+                <div className="subtitle">
+                    Editable
+                </div>
+                <Stars />
+                <div className="subtitle">
+                    Non-Editable
+                </div>
+                <Stars readonly={true} rating={7}/>
+            </div>
+        );
     }
 }
 

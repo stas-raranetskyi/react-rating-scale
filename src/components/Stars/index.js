@@ -2,6 +2,7 @@ import React from 'react';
 import Template from './template';
 import PropTypes from 'prop-types';
 import { createStars } from '../../helpers';
+import icon from './img/icon.svg';
 
 export default class Stars extends React.Component {
 
@@ -10,7 +11,7 @@ export default class Stars extends React.Component {
         const stars = createStars(this.props.countStars);
         this.state = {
             selectIndex: -1,
-            selectIndexForce: -1,
+            selectIndexForce: this.props.rating,
             stars
         }
     }
@@ -52,6 +53,12 @@ export default class Stars extends React.Component {
         this.reset();
     }
 
+    onMouseEnter(index){
+        if(this.props.readonly === false){
+            this.setActiveStar(index);
+        }
+    }
+
     render() {
         return <Template
                     {...this.props}
@@ -59,6 +66,7 @@ export default class Stars extends React.Component {
                     selectIndex={this.state.selectIndex}
                     selectIndexForce={this.state.selectIndexForce}
                     setActiveStar={this.setActiveStar.bind(this)}
+                    onMouseEnter={this.onMouseEnter.bind(this)}
                     onMouseLeave={this.onMouseLeave.bind(this)}
                     onSelect={this.onSelect.bind(this)}
             />
@@ -66,15 +74,27 @@ export default class Stars extends React.Component {
 }
 
 Stars.propTypes = {
+    rating: PropTypes.number,
     countStars: PropTypes.number,
     readonly: PropTypes.bool,
     onSelect: PropTypes.func,
     beforeSelect: PropTypes.func,
+    icon: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    classNameStarsWrap: PropTypes.string,
+    classNameStarItem: PropTypes.string,
 }
 
 Stars.defaultProps = {
+    rating: -1,
     countStars: 10,
     readonly: false,
     onSelect: () => {},
     beforeSelect: () => true,
+    icon,
+    width: 20,
+    height: 19,
+    classNameStarsWrap: '',
+    classNameStarItem: '',
 }

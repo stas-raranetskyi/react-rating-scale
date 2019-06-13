@@ -1,2 +1,5 @@
 webpack.config.js
 docs
+src/index.html
+src/index.js
+src/styles.css
