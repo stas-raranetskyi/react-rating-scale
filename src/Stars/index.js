@@ -59,8 +59,6 @@ export default class Stars extends React.Component {
     }
 
     render() {
-        console.log(this.state.selectIndex);
-        console.log(this.state.selectIndexForce);
         return <Template
                     {...this.props}
                     icon={this.props.icon}
