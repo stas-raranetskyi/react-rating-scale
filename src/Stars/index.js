@@ -1,7 +1,7 @@
 import React from 'react';
 import Template from './template';
 import PropTypes from 'prop-types';
-import { createStars } from './helpers';
+import { createStars } from '../helpers';
 import icon from './img/icon.svg';
 
 export default class Stars extends React.Component {

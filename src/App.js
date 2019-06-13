@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Stars from './components/Stars';
+import Stars from './Stars';
 import './styles.css';
 
 class App extends Component {
