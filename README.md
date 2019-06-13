@@ -1,18 +1,18 @@
 ## Install
 
 ```sh
-npm install --save rating-stars-react
+npm install --save react-rating-scale
 ```
 
 ## Demo
 
-[https://stas-raranetskyi.github.io/react-rating-stars/](https://stas-raranetskyi.github.io/react-rating-stars/)
+[https://stas-raranetskyi.github.io/react-rating-scale/](https://stas-raranetskyi.github.io/react-rating-scale/)
 
 ## Usage
 
 ```javascript
 import React from 'react'
-import Rating  from 'rating-stars-react';
+import Rating  from 'react-rating-scale';
 
 class App extends React.Component {
     render() {
