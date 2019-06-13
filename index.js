@@ -1,3 +1,3 @@
-import App from './src/App';
+import Stars from './src/components/Stars';
 
-export default App;
+export default Stars;
